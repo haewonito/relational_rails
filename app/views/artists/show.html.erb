@@ -1,0 +1,39 @@
+<h1><%= @artist.first_name+ " " + @artist.name %></h1>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #777777;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<table>
+  <tr>
+    <th>Full Name</th>
+    <th>Age</th>
+    <th>Alive</th>
+    <th>Created_at</th>
+    <th>Updated_at</th>
+  </tr>
+
+  <tr>
+    <td><%= @artist.first_name + " " + @artist.name %></td>
+    <td><%= @artist.age  %></td>
+    <td><%= @artist.alive %></td>
+    <td><%= @artist.created_at %></td>
+    <td><%= @artist.updated_at %></td>
+  </tr>
+
+</table>
