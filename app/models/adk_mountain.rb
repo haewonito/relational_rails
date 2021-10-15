@@ -1,0 +1,3 @@
+class AdkMountain < ApplicationRecord
+
+end
