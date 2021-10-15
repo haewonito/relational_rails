@@ -1,0 +1,24 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<h1> ADK Mountain w/ ID <%= @adk_mountain.id %> </h1>
+<table>
+  <tr>
+    <th> name
+    <th> elevation
+    <th> high_peak
+    <th> updated_at
+    <th> created_at
+    <th> id
+  </tr>
+  <tr>
+    <th> <%= @adk_mountain.name %> </th>
+    <th> <%= @adk_mountain.elevation %> </th>
+    <th> <%= @adk_mountain.high_peak %> </th>
+    <th> <%= @adk_mountain.updated_at %> </th>
+    <th> <%= @adk_mountain.created_at %> </th>
+    <th> <%= @adk_mountain.id %> </th>
+  </tr>
+</table>
