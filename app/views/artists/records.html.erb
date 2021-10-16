@@ -1,0 +1,47 @@
+<h1>Records by</h1>
+<h1><%= " " + @artist1.first_name + " " + @artist1.name %></h1>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #777777;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>Used</th>
+    <th>Artist ID</th>
+    <th>Created_at</th>
+    <th>Updated_at</th>
+  </tr>
+
+  <% @records_for_artist.each do |record| %>
+    <tr>
+        <td><%= record.title %></td>
+        <td><%= record.genre %></td>
+        <td><%= record.year %></td>
+        <td><%= record.used %></td>
+        <td><%= record.artist_id %></td>
+        <td><%= record.created_at %></td>
+        <td><%= record.updated_at %></td>
+    </tr>
+  <% end %>
+
+
+</table>

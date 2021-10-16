@@ -8,4 +8,9 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def records
+    @artist1 = Artist.find(params[:id])
+    @records_for_artist = @artist1.records
+  end
+
 end
