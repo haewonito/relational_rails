@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # get '/artists/:id', to: 'artists'
   get '/artists/:id', to: 'artists#show'
   # :id is a domain-specific language DSL
+  get '/records', to: 'records#index'
 end
