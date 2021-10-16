@@ -242,10 +242,17 @@
         "lines": [
           1,
           null,
+          null,
+          1,
           1,
           null,
           1,
+          1,
           null,
+          1,
+          1,
+          null,
+          1,
           null
         ]
       },
@@ -268,8 +275,15 @@
           1,
           null
         ]
+      },
+      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/models/record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1634267513
+    "timestamp": 1634402540
   }
 }

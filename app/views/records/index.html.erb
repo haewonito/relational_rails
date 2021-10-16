@@ -31,17 +31,17 @@ tr:nth-child(even) {
     <th>Updated_at</th>
   </tr>
 
-  <tr>
-    <% @records.each do |record| %>
-      <td><%= record.title %></td>
-      <td><%= record.genre %></td>
-      <td><%= record.year %></td>
-      <td><%= record.used %></td>
-      <td><%= record.artist_id %></td>
-      <td><%= record.created_at %></td>
-      <td><%= record.updated_at %></td>
-    <% end %>
-  </tr>
+  <% @records.each do |record| %>
+    <tr>
+        <td><%= record.title %></td>
+        <td><%= record.genre %></td>
+        <td><%= record.year %></td>
+        <td><%= record.used %></td>
+        <td><%= record.artist_id %></td>
+        <td><%= record.created_at %></td>
+        <td><%= record.updated_at %></td>
+    </tr>
+  <% end %>
 
 
 </table>
