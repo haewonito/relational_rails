@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_10_14_230744) do
-ActiveRecord::Schema.define(version: 2021_10_15_210853) do
+ActiveRecord::Schema.define(version: 2021_10_16_040239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +32,16 @@ ActiveRecord::Schema.define(version: 2021_10_15_210853) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "hikers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "on_mountain"
+    t.integer "phone_num"
+    t.string "name"
+    t.bigint "adk_mountain_id"
+    t.index ["adk_mountain_id"], name: "index_hikers_on_adk_mountain_id"
+  end
+
   create_table "records", force: :cascade do |t|
     t.string "genre"
     t.integer "year"
@@ -45,5 +53,6 @@ ActiveRecord::Schema.define(version: 2021_10_15_210853) do
     t.index ["artist_id"], name: "index_records_on_artist_id"
   end
 
+  add_foreign_key "hikers", "adk_mountains"
   add_foreign_key "records", "artists"
 end
