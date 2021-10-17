@@ -4,10 +4,8 @@
 
 <h6><a href="/artists">Artist Names</a></h6>
 <h6><a href="/records">All Records</a></h6>
-<h6><a href="/artists/#{@artist.id}/records">Records by the artist</a></h6>
 
-<h1><%= @artist.first_name + " " + @artist.name + ": #{@count} records in file" %></h1>
-
+<h1><%= @record.title %></h1>
 
 <style>
 table {
@@ -30,19 +28,23 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>Full Name</th>
-    <th>Age</th>
-    <th>Alive</th>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>Used</th>
+    <th>Artist ID</th>
     <th>Created_at</th>
     <th>Updated_at</th>
   </tr>
 
   <tr>
-    <td><%= @artist.first_name + " " + @artist.name %></td>
-    <td><%= @artist.age  %></td>
-    <td><%= @artist.alive %></td>
-    <td><%= @artist.created_at %></td>
-    <td><%= @artist.updated_at %></td>
+    <td><%= @record.title %></td>
+    <td><%= @record.genre  %></td>
+    <td><%= @record.year %></td>
+    <td><%= @record.used %></td>
+    <td><%= @record.artist_id %></td>
+    <td><%= @record.created_at %></td>
+    <td><%= @record.updated_at %></td>
   </tr>
 
 </table>

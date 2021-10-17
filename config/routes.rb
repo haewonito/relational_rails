@@ -3,8 +3,13 @@ Rails.application.routes.draw do
 
   get '/adk_mountains', to: 'adk_mountains#names'
   get '/adk_mountains/:id', to: 'adk_mountains#table'
+
   get '/artists', to: 'artists#index'
-  # get '/artists/:id', to: 'artists'
   get '/artists/:id', to: 'artists#show'
-  # :id is a domain-specific language DSL
+
+  get '/records', to: 'records#index'
+  get '/records/:id', to: 'records#show'
+
+  get 'artists/:id/records', to: 'artists#records'
+
 end

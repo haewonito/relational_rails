@@ -8,7 +8,5 @@ RSpec.describe 'the artists show page' do
     expect(page).to have_content(artist.name)
     expect(page).to have_content(artist.first_name)
     expect(page).to_not have_content(artist.age)
-
-
   end
 end
