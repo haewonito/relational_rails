@@ -1,4 +1,18 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
 <h1>ADK Mountains</h1>
-<% @adk_mountains.each do |adk_mountain| %>
-  <%= adk_mountain.name %>
-<% end %>
+<table>
+  <tr>
+    <th> name
+    <th> created_at
+  </tr>
+  <% @adk_mountains.each do |adk_mountain| %>
+  <tr>
+    <th> <%= adk_mountain.name %> </th>
+    <th> <%= adk_mountain.created_at %> </th>
+  </tr>
+  <% end %>
+</table>
