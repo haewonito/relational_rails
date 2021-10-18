@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/adk_mountains/:id', to: 'adk_mountains#table'
   get '/hikers/:id', to: 'hikers#by_id'
   get '/hikers', to: 'hikers#table'
-  get '/adk_mountains/:id/hikers', to: 'hikers#hikers_by_mountain'
+  get '/adk_mountains/:id/hikers', to: 'adk_mountains#hikers_by_mountain'
   get '/artists', to: 'artists#index'
   # get '/artists/:id', to: 'artists'
   get '/artists/:id', to: 'artists#show'
