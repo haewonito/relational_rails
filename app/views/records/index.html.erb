@@ -41,6 +41,7 @@ tr:nth-child(even) {
   </tr>
 
   <% @records.each do |record| %>
+    <% if record.used == true %>
     <tr>
         <td><%= record.title %></td>
         <td><%= record.genre %></td>
@@ -50,6 +51,7 @@ tr:nth-child(even) {
         <td><%= record.created_at %></td>
         <td><%= record.updated_at %></td>
     </tr>
+    <% end %>
   <% end %>
 
 
