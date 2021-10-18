@@ -247,17 +247,86 @@
           1,
           null,
           1,
-          1,
           null,
           1,
           1,
           null,
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           null
         ]
       },
       "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/controllers/artists_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
@@ -276,42 +345,8 @@
           1,
           null
         ]
-      },
-      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/models/record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/controllers/artists_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/haewonjeon/right_now_Turing/project1/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1634430135
+    "timestamp": 1634524136
   }
 }
