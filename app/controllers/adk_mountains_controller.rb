@@ -7,4 +7,9 @@ class AdkMountainsController < ApplicationController
   def table
     @adk_mountain = AdkMountain.find(params[:id])
   end
+  def hikers_by_mountain
+    @adk_mountain = AdkMountain.find(params[:id])
+    @hikers = Hiker.find(params[])
+
+  end
 end
