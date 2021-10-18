@@ -14,4 +14,36 @@ class ArtistsController < ApplicationController
     @records_for_artist = @artist1.records
   end
 
+  def new
+  end
+
+#do I need .to_i and .to_b?
+  def create
+    artist = Artist.new({
+      name: params[:artist][:name],
+      first_name: params[:artist][:first_name],
+      age: params[:artist][:age],
+      alive: params[:artist][:alive]
+      })
+
+      artist.save
+      redirect_to '/artists'
+  end
+
+  def edit
+    @artist = Artist.find(params[:id])
+  end
+
+  def update
+    artist = Artist.find(params[:id])
+        artist.update({
+          name: params[:artist][:name],
+          first_name: params[:artist][:first_name],
+          age: params[:artist][:age],
+          alive: params[:artist][:alive]
+          })
+    artist.save
+    redirect_to "/artists/#{artist.id}"
+  end
+
 end
