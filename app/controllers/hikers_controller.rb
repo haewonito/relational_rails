@@ -3,7 +3,7 @@ class HikersController < ApplicationController
     @hikers = Hiker.all
   end
   def table
-    @hiker = Hiker.all
+    @hikers = Hiker.all
   end
   def by_id
     @hiker = Hiker.find(params[:id])
