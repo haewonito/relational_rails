@@ -12,6 +12,12 @@ class ArtistsController < ApplicationController
   def records
     @artist1 = Artist.find(params[:id])
     @records_for_artist = @artist1.records
+    if params[:sort] == 'asc'
+
+      @artist1 = Artist.find(params[:id])
+      @records_for_artist = @artist1.records.all.order(:title)
+    end
+
   end
 
   def new
@@ -45,5 +51,11 @@ class ArtistsController < ApplicationController
     artist.save
     redirect_to "/artists/#{artist.id}"
   end
+
+  # def sort
+  #   @records = Record.all.order(:title)
+  #   artist = Artist.find(params[:id])
+  #   redirect_to "/artists/#{artist.id}/records"
+  # end
 
 end

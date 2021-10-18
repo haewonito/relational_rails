@@ -8,6 +8,9 @@ to the artist with corresponding id -->
 <h6><a href="/artists">Artist Names</a></h6>
 <h6><a href="/records">All Records</a></h6>
 
+<h6><%= link_to("Sort Records in Alphabetical Order", "/artists/#{@artist1.id}/records?sort=asc")%></h6>
+
+
 
 <h1>Records by</h1>
 <h1><%= " " + @artist1.first_name + " " + @artist1.name %></h1>
