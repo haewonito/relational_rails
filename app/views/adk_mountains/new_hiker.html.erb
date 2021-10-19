@@ -1,0 +1,9 @@
+<%= form_with url: "/adk_mountains/#{@adk_mountain.id}/hikers/new", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :phone_num %>
+  <%= form.text_field :phone_num %>
+  <%= form.label :on_mountain %>
+  <%= form.text_field :on_mountain %>
+  <%= form.submit 'Create Hiker' %>
+<% end %>

@@ -11,6 +11,28 @@ class AdkMountainsController < ApplicationController
   def hikers_by_mountain
     @adk_mountain = AdkMountain.find(params[:id])
     @hikers = @adk_mountain.hikers
-
   end
+  def new
+  end
+  def create
+    AdkMountain.create(name: params[:name], elevation: params[:elevation], high_peak: params[:high_peak])
+    redirect_to '/adk_mountains'
+  end
+  def edit
+    @adk_mountain = AdkMountain.find(params[:id])
+  end
+  def update
+    @adk_mountain = AdkMountain.find(params[:id])
+    @adk_mountain.update(name: params[:name], elevation: params[:elevation], high_peak: params[:high_peak])
+    redirect_to "/adk_mountains/#{@adk_mountain.id}"
+  end
+  def new_hiker
+    @adk_mountain = AdkMountain.find(params[:id])
+  end
+  def create_hiker
+    @adk_mountain = AdkMountain.find(params[:id])
+    @adk_mountain.hikers.create(name: params[:name], phone_num: params[:phone_num], on_mountain: params[:on_mountain])
+    redirect_to "/adk_mountains/#{@adk_mountain.id}/hikers"
+  end
+
 end

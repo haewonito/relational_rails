@@ -1,0 +1,9 @@
+<%= form_with url: "/adk_mountains", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :elevation %>
+  <%= form.text_field :elevation %>
+  <%= form.label :high_peak %>
+  <%= form.text_field :high_peak %>
+  <%= form.submit 'Create Adk Mountain' %>
+<% end %>

@@ -3,9 +3,10 @@ table, th, td {
   border:1px solid black;
 }
 </style>
-<h4><a href=adk_mountains>ADK Mountains</a></h4>
-<h4><a href=hikers>Hikers</a></h4>
-<h4><a <%= link_to('Hikers associated with this mountain', "/adk_mountains/#{@adk_mountain.id}/hikers") %></h4>
+<h4><a href=/adk_mountains>ADK Mountains</a></h4>
+<h4><a href=/hikers>Hikers</a></h4>
+<h4><%= link_to('Hikers associated with this mountain', "/adk_mountains/#{@adk_mountain.id}/hikers")%></h4>
+<h4><%= link_to('Update Adk Mountain', "/adk_mountains/#{@adk_mountain.id}/edit")%></h4>
 <h1> ADK Mountain w/ ID <%= @adk_mountain.id %> Number of hikers: <%= @count %></h1>
 <table>
   <tr>
