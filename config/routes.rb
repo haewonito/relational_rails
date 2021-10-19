@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   post '/adk_mountains/:id/hikers/new', to: 'adk_mountains#create_hiker'
   get '/hikers/:id/edit', to: 'hikers#edit'
   patch '/hikers/:id/edit', to: 'hikers#update'
+  delete '/adk_mountains/:id', to: 'adk_mountains#destroy'
+  delete '/hikers/:id', to: 'hikers#destroy'
 
   get '/artists', to: 'artists#index'
 

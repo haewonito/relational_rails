@@ -41,11 +41,11 @@ class AdkMountainsController < ApplicationController
     @adk_mountain.hikers.create(name: params[:name], phone_num: params[:phone_num], on_mountain: params[:on_mountain])
     redirect_to "/adk_mountains/#{@adk_mountain.id}/hikers"
   end
-  def delete
-    @adk_mountain = AdkMountain.find(params[:id])
-  end
+
   def destroy
     @adk_mountain = AdkMountain.find(params[:id])
+
+    @adk_mountain.hikers.destroy_all
     AdkMountain.destroy(params[:id])
     redirect_to "/adk_mountains"
   end
