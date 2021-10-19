@@ -1,0 +1,30 @@
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<h4><%= link_to('ADK Mountains', "/adk_mountains")%></h4>
+<h4><%= link_to('Hikers', "/hikers")%></h4>
+<h4><%= link_to('Update Hiker', "/hikers/#{@hiker.id}/edit")%></h4>
+
+<h1> Hiker w/ ID <%= @hiker.id %> </h1>
+<table>
+  <tr>
+    <th> name
+    <th> phone_num
+    <th> on_mountain
+    <th> updated_at
+    <th> created_at
+    <th> mountain_id
+    <th> id
+  </tr>
+  <tr>
+    <td><%= @hiker.name %></td>
+    <td><%= @hiker.phone_num %></td>
+    <td><%= @hiker.on_mountain %></td>
+    <td><%= @hiker.updated_at %></td>
+    <td><%= @hiker.created_at %></td>
+    <td><%= @hiker.adk_mountain_id %></td>
+    <td><%= @hiker.id %></td>
+  </tr>
+</table>
