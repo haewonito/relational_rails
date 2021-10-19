@@ -1,0 +1,17 @@
+<form action="/records/<%= @record.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <br>
+  <p>Title:</p>
+  <input type='text' name='record[title]' value="<%= @record.title %>"/><br/>
+  <p>Genre:</p>
+  <input type='text' name='record[genre]' value="<%= @record.genre %>"/><br/>
+  <p>Artist ID</p>
+  <input type='text' name='record[used]' value="<%= @record.artist_id %>"/><br/>
+  <p>Used (true or false)</p>
+  <input type='text' name='record[used]' value="<%= @record.used %>"/><br/>
+
+<br>
+  <input type='submit' value="Edit Record"/>
+</form>
