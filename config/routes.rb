@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get '/artists/:id/records', to: 'artists#records'
 
+  get '/records/:id/edit', to: 'records#edit'
+  patch '/records/:id', to: 'records#update'
 
 
 

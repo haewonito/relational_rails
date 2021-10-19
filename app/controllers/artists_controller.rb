@@ -52,10 +52,6 @@ class ArtistsController < ApplicationController
     redirect_to "/artists/#{artist.id}"
   end
 
-  # def sort
-  #   @records = Record.all.order(:title)
-  #   artist = Artist.find(params[:id])
-  #   redirect_to "/artists/#{artist.id}/records"
-  # end
+
 
 end
