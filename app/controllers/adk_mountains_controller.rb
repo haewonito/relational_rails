@@ -47,7 +47,7 @@ class AdkMountainsController < ApplicationController
   def destroy
     @adk_mountain = AdkMountain.find(params[:id])
     AdkMountain.destroy(params[:id])
-    redirect_to "/adk_mountains/#{@adk_mountain.id}"
+    redirect_to "/adk_mountains"
   end
 
 end
