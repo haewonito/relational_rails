@@ -1,3 +1,5 @@
+<!-- '/records': shows all information for all records -->
+
 <style>
   h6 {text-align:right; margin:0;}
 </style>
@@ -29,6 +31,7 @@ tr:nth-child(even) {
 
 <table>
   <tr>
+    <th>Click to Edit</th>
     <th>Title</th>
     <th>Genre</th>
     <th>Year</th>
@@ -39,7 +42,9 @@ tr:nth-child(even) {
   </tr>
 
   <% @records.each do |record| %>
+    <% if record.used == true %>
     <tr>
+        <td><%= link_to("Edit", "/records/#{record.id}/edit") %></td>
         <td><%= record.title %></td>
         <td><%= record.genre %></td>
         <td><%= record.year %></td>
@@ -48,6 +53,7 @@ tr:nth-child(even) {
         <td><%= record.created_at %></td>
         <td><%= record.updated_at %></td>
     </tr>
+    <% end %>
   <% end %>
 
 
