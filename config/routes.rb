@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+
   get '/adk_mountains', to: 'adk_mountains#index'
   get '/adk_mountains/new', to: 'adk_mountains#new'
   post '/adk_mountains', to: 'adk_mountains#create'
@@ -14,10 +15,29 @@ Rails.application.routes.draw do
   post '/adk_mountains/:id/hikers/new', to: 'adk_mountains#create_hiker'
   get '/hikers/:id/edit', to: 'hikers#edit'
   patch '/hikers/:id/edit', to: 'hikers#update'
-  get '/adk_mountains/:id/delete', to: 'adk_mountains#delete'
-  delete '/adk_mountains/:id/delete', to: 'adk_mountains#destroy'
+
   get '/artists', to: 'artists#index'
-  # get '/artists/:id', to: 'artists'
+
+  get '/artists/new', to: 'artists#new'
+  post '/artists', to: 'artists#create'
+
   get '/artists/:id', to: 'artists#show'
-  # :id is a domain-specific language DSL
+
+  get '/artists/:id/edit', to: 'artists#edit'
+  patch 'artists/:id', to: 'artists#update'
+
+
+  get '/records', to: 'records#index'
+  get '/records/:id', to: 'records#show'
+
+  get '/artists/:id/records', to: 'artists#records'
+
+  get '/records/:id/edit', to: 'records#edit'
+  patch '/records/:id', to: 'records#update'
+
+
+
+
+
+
 end
