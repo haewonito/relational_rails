@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   patch '/hikers/:id/edit', to: 'hikers#update'
   delete '/adk_mountains/:id', to: 'adk_mountains#destroy'
   delete '/hikers/:id', to: 'hikers#destroy'
+  delete '/adk_mountains/:id/hikers', to: 'hikers#destroy'
 
   get '/artists', to: 'artists#index'
 

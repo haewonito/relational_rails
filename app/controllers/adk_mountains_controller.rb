@@ -12,6 +12,11 @@ class AdkMountainsController < ApplicationController
   def hikers_by_mountain
     @adk_mountain = AdkMountain.find(params[:id])
     @hikers = @adk_mountain.hikers
+    if params[:sort] == 'asc'
+
+      @adk_mountain = AdkMountain.find(params[:id])
+      @hikers = @adk_mountain.hikers.all.order(:name)
+    end
   end
 
   def new
