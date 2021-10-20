@@ -11,7 +11,7 @@ RSpec.describe 'the adk_mountains index page' do
 
 
   end
-  it 'US:23 can click link and delete any adk_mountain' do
+  it 'US:22 can click link and delete any adk_mountain' do
     adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
 
     visit "/adk_mountains"
