@@ -6,6 +6,7 @@ table, th, td {
 <h4><a href=/adk_mountains>ADK Mountains</a></h4>
 <h4><a href=/hikers>Hikers</a></h4>
 <h4><%= link_to('Create Hiker', "/adk_mountains/#{@adk_mountain.id}/hikers/new")%></h4>
+<h4><%= link_to('Delete Adk Mountain', "/adk_mountains/#{@adk_mountain.id}", method: :delete)%></h4>
 <h1> Hikers on <%= @adk_mountain.name %> </h1>
 <table>
   <tr>
