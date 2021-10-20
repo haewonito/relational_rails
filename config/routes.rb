@@ -3,18 +3,26 @@ Rails.application.routes.draw do
 
 
   get '/adk_mountains', to: 'adk_mountains#index'
+
   get '/adk_mountains/new', to: 'adk_mountains#new'
   post '/adk_mountains', to: 'adk_mountains#create'
+
   get '/adk_mountains/:id', to: 'adk_mountains#show'
+
   get '/hikers/:id', to: 'hikers#show'
   get '/hikers', to: 'hikers#index'
+
   get '/adk_mountains/:id/edit', to: 'adk_mountains#edit'
   patch '/adk_mountains/:id/edit', to: 'adk_mountains#update'
+
   get '/adk_mountains/:id/hikers', to: 'adk_mountains#hikers_by_mountain'
+
   get '/adk_mountains/:id/hikers/new', to: 'adk_mountains#new_hiker'
   post '/adk_mountains/:id/hikers/new', to: 'adk_mountains#create_hiker'
+
   get '/hikers/:id/edit', to: 'hikers#edit'
   patch '/hikers/:id/edit', to: 'hikers#update'
+
   delete '/adk_mountains/:id', to: 'adk_mountains#destroy'
   delete '/hikers/:id', to: 'hikers#destroy'
   delete '/adk_mountains/:id/hikers', to: 'hikers#destroy'
@@ -35,11 +43,16 @@ Rails.application.routes.draw do
 
   get '/artists/:id/records', to: 'artists#records'
 
+  get '/artists/:id/records/new', to: 'artists#new_record'
+  post '/artists/:id/records/new', to: 'artists#create_record'
+
   get '/records/:id/edit', to: 'records#edit'
   patch '/records/:id', to: 'records#update'
 
   delete '/artists/:id', to: 'artists#destroy'
   delete '/records/:id', to: 'records#destroy'
+  delete '/artists/:id/records', to: 'records#destroy'
+
 
 
 

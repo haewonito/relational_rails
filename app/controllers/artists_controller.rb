@@ -52,6 +52,16 @@ class ArtistsController < ApplicationController
     redirect_to "/artists/#{artist.id}"
   end
 
+  def new_record
+    @artist = Artist.find(params[:id])
+  end
+
+  def create_record
+    @artist = Artist.find(params[:id])
+    @artist.records.create(genre: params[:genre], year: params[:year], used: params[:used], title: params[:title])
+    redirect_to "/artists/#{@artist.id}/records"
+  end
+
   def destroy
     @artist = Artist.find(params[:id])
 

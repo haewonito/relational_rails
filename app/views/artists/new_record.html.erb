@@ -1,0 +1,11 @@
+<%= form_with url: "/artists/#{@artist.id}/records/new", method: :post, local: true do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :genre %>
+  <%= form.text_field :genre %>
+  <%= form.label :year %>
+  <%= form.text_field :year %>
+  <%= form.label :used %>
+  <%= form.text_field :used %>
+  <%= form.submit 'Create Record' %>
+<% end %>
