@@ -19,8 +19,10 @@ table, th, td {
   <tr>
     <th> <%= link_to("Edit", "/adk_mountains/#{adk_mountain.id}/edit")%> </th>
     <th> <%= link_to('Delete', "/adk_mountains/#{adk_mountain.id}", method: :delete)%> </th>
+    <section>
     <th> <%= adk_mountain.name %> </th>
     <th> <%= adk_mountain.created_at %> </th>
+    </section>
   </tr>
   <% end %>
 </table>

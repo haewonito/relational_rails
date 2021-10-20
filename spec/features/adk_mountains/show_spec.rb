@@ -13,6 +13,16 @@ RSpec.describe 'the adk_mountain show page' do
       expect(page).to have_content(adk_mountain.created_at)
       expect(page).to_not have_content(adk_mountain)
     end
+    it 'US:7 displays the count of the number of hikers associated with the adk_mountain' do
+      adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
+      hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
+        visit "/adk_mountains/#{adk_mountain.id}"
+        within('section') do
+          expect(page).to have_content(1)
+        end
+    end
+
+
   end
   describe 'Iteration 3' do
     it 'US:19 can delete the mountain shown along w/ all hikers associated linked to the mountain' do
@@ -30,7 +40,7 @@ RSpec.describe 'the adk_mountain show page' do
       expect(page).to_not have_content(adk_mountain.created_at)
 
       visit "/hikers"
-  
+
       expect(page).to_not have_content(hiker.id)
       expect(page).to_not have_content(hiker.name)
 
