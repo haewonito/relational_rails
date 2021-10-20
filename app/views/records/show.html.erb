@@ -7,6 +7,9 @@
 <h6><a href="/artists">Artist Names</a></h6>
 <h6><a href="/records">All Records</a></h6>
 
+<h6><%= link_to('Delete Record', "/records/#{@record.id}", method: :delete)%></h6>
+
+
 <h1><%= @record.title %></h1>
 
 <style>

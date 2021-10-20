@@ -19,6 +19,7 @@ class HikersController < ApplicationController
     @hiker.update(name: params[:name], phone_num: params[:phone_num], on_mountain: params[:on_mountain])
     redirect_to "/hikers/#{@hiker.id}"
   end
+
   def destroy
     @hiker = Hiker.find(params[:id])
     Hiker.destroy(params[:id])
