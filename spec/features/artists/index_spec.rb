@@ -19,12 +19,7 @@ RSpec.describe 'the artists show page' do
     visit '/artists'
 
     expect(page). to
-#   User Story 6, Parent Index sorted by Most Recently Created (x2)
-#
-# As a visitor
-# When I visit the parent index,
-# I see that records are ordered by most recently created first
-# And next to each of the records I see when it was created
 
   end
+
 end
