@@ -1,7 +1,7 @@
 class AdkMountainsController < ApplicationController
 
   def index
-    @adk_mountains = AdkMountain.all.order(created_at: :desc)
+    @adk_mountains = AdkMountain.all.order(created_at: :asc)
   end
 
   def show
