@@ -15,5 +15,9 @@
   <p>
     <%= artist.first_name + " " + artist.name %>
     <%= link_to("Edit", "/artists/#{artist.id}/edit")%>
+    <br>
+    <%= "Created At: " %>
+    <%= artist.created_at %>
+
   </p>
 <% end %>
