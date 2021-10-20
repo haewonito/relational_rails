@@ -6,10 +6,12 @@ table, th, td {
 <h4><a href=/adk_mountains>ADK Mountains</a></h4>
 <h4><a href=/hikers>Hikers</a></h4>
 <h4><%= link_to('Create Hiker', "/adk_mountains/#{@adk_mountain.id}/hikers/new")%></h4>
-<h4><%= link_to('Delete Adk Mountain', "/adk_mountains/#{@adk_mountain.id}", method: :delete)%></h4>
+<h4><%= link_to("Sort Hikers in Alphabetical Order", "/adk_mountains/#{@adk_mountain.id}/hikers?sort=asc")%></h4>
 <h1> Hikers on <%= @adk_mountain.name %> </h1>
 <table>
   <tr>
+    <th> edit
+    <th> delete
     <th> name
     <th> phone_num
     <th> on_mountain
@@ -20,6 +22,8 @@ table, th, td {
   </tr>
   <% @hikers.each do |hiker| %>
     <tr>
+        <td><%= link_to("Edit", "/hikers/#{hiker.id}/edit")%> </td>
+        <td><%= link_to('Delete', "/hikers", method: :delete)%></td>
         <td><%= hiker.name %></td>
         <td><%= hiker.phone_num %></td>
         <td><%= hiker.on_mountain %></td>
