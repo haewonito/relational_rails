@@ -32,6 +32,7 @@ tr:nth-child(even) {
 <table>
   <tr>
     <th>Click to Edit</th>
+    <th>Click to Delete</th>
     <th>Title</th>
     <th>Genre</th>
     <th>Year</th>
@@ -45,6 +46,7 @@ tr:nth-child(even) {
     <% if record.used == true %>
     <tr>
         <td><%= link_to("Edit", "/records/#{record.id}/edit") %></td>
+        <td><%= link_to('Delete', "/records/#{record.id}", method: :delete)%></td>
         <td><%= record.title %></td>
         <td><%= record.genre %></td>
         <td><%= record.year %></td>
