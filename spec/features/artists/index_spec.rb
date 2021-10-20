@@ -12,14 +12,16 @@ RSpec.describe 'the artists show page' do
       expect(page).to_not have_content(artist.age)
     end
     #US6
-    xit 'sorts by most recently created' do
+    it 'US:6 can display artists in order of when it was created' do
+      artist = Artist.create(name: 'McDowell', first_name: 'Fred', age: 66, alive: false)
+      artist1 = Artist.create!(name: 'McD', first_name: 'Frad', age: 66, alive: false)
 
-      artist1 = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: false)
-      artist2 = Artist.create!(name: 'Costello', first_name: 'Elvis', age: 76, alive: true)
+      visit "/artists"
 
-      visit '/artists'
-
-      expect(page). to
+      within(first('p')) do
+        expect(page).to have_content('Fred')
+        expect(page).to_not have_content('Frad')
+      end
     end
   end
   describe 'when visitor visits any page on site' do

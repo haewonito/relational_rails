@@ -37,7 +37,7 @@ RSpec.describe 'the adk_mountains index page' do
     visit "/adk_mountains"
 
     click_link('ADK Mountains')
-    
+
     expect(current_path).to eq("/adk_mountains")
   end
 

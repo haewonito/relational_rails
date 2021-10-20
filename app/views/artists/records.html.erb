@@ -47,6 +47,7 @@ tr:nth-child(even) {
   </tr>
 
   <% @records_for_artist.each do |record| %>
+    <section>
     <tr>
         <td><%= link_to("Edit", "/records/#{record.id}/edit") %></td>
         <td><%= link_to('Delete Record', "/records/#{record.id}", method: :delete)%></td>
@@ -58,6 +59,7 @@ tr:nth-child(even) {
         <td><%= record.created_at %></td>
         <td><%= record.updated_at %></td>
     </tr>
+    </section>
   <% end %>
 
 
