@@ -23,6 +23,24 @@ RSpec.describe 'as a visitor' do
     expect(page).to_not have_content(record3.used)
     expect(page).to_not have_content(record3.year)
     expect(page).to_not have_content(record3.artist_id)
-end
+  end
 
+#   User Story 16, Sort Parent's Children in Alphabetical Order by name (x2)
+#
+# As a visitor
+# When I visit the Parent's children Index Page
+# Then I see a link to sort children in alphabetical order
+# When I click on the link
+# I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+
+  xit "user story 16: sort artist's records in alphabetical order by title" do
+    visit "artists/#{artist1.id}/records"
+
+    click_link ("Sort Records in Alphabetical Order")
+
+    expect(current_path).to eq("artists/#{artist1.id}/records")
+    expect(page).to
+
+
+  end
 end
