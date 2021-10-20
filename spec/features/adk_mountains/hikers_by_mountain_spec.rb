@@ -10,6 +10,26 @@ RSpec.describe 'the adk_mountains hikers index page' do
     expect(page).to have_content(hiker.phone_num)
     expect(page).to have_content(hiker.on_mountain)
   end
+  it 'US:8 has a link to hiker index' do
+    adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
+    hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
+
+    visit "/adk_mountains/#{adk_mountain.id}/hikers"
+
+    click_link('Hikers')
+
+    expect(current_path).to eq("/hikers")
+  end
+  it 'US:9 has a link to adk_mountain index' do
+    adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
+    hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
+
+    visit "/adk_mountains/#{adk_mountain.id}/hikers"
+
+    click_link('ADK Mountains')
+
+    expect(current_path).to eq("/adk_mountains")
+  end
   it 'US:16 can click link and sort hikers alphabetically' do
     adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
     hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
