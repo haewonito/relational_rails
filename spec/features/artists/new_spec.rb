@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+#US 11
 RSpec.describe 'the Artist creation' do
 
   it 'links to the new page from the artists index' do
