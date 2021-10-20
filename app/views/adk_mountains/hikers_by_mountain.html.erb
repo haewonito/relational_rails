@@ -22,6 +22,7 @@ table, th, td {
   </tr>
   <% @hikers.each do |hiker| %>
     <tr>
+    <section>
         <td><%= link_to("Edit", "/hikers/#{hiker.id}/edit")%> </td>
         <td><%= link_to('Delete', "/hikers", method: :delete)%></td>
         <td><%= hiker.name %></td>
@@ -31,6 +32,7 @@ table, th, td {
         <td><%= hiker.created_at %></td>
         <td><%= hiker.adk_mountain_id %></td>
         <td><%= hiker.id %></td>
+    </section>
     </tr>
   <% end %>
 </table>
