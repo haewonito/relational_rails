@@ -31,5 +31,7 @@ RSpec.describe 'the hikers show page' do
       expect(page).to_not have_content(hiker.created_at)
       expect(page).to have_content("Hikers")
     end
+
+
   end
 end

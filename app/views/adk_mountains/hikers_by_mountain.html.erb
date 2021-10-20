@@ -10,6 +10,7 @@ table, th, td {
 <h1> Hikers on <%= @adk_mountain.name %> </h1>
 <table>
   <tr>
+    <th> delete
     <th> name
     <th> phone_num
     <th> on_mountain
@@ -20,6 +21,7 @@ table, th, td {
   </tr>
   <% @hikers.each do |hiker| %>
     <tr>
+        <td><%= link_to('Delete', "/hikers", method: :delete)%></td>
         <td><%= hiker.name %></td>
         <td><%= hiker.phone_num %></td>
         <td><%= hiker.on_mountain %></td>

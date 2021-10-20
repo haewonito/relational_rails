@@ -6,11 +6,7 @@ class HikersController < ApplicationController
   def show
     @hiker = Hiker.find(params[:id])
   end
-
-  def hikers_by_mountain
-    @hikers = Hiker.find(params[:adk_mountain_id])
-  end
-
+  
   def edit
     @hiker = Hiker.find(params[:id])
   end
