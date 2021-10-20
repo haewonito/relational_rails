@@ -9,6 +9,7 @@ table, th, td {
 <h1> Hikers </h1>
 <table>
   <tr>
+    <th> edit
     <th> delete
     <th> name
     <th> phone_num
@@ -19,15 +20,18 @@ table, th, td {
     <th> id
   </tr>
   <% @hikers.each do |hiker| %>
-    <tr>
-        <td><%= link_to('Delete', "/hikers/#{hiker.id}", method: :delete)%>
-        <td><%= hiker.name %></td>
-        <td><%= hiker.phone_num %></td>
-        <td><%= hiker.on_mountain %></td>
-        <td><%= hiker.updated_at %></td>
-        <td><%= hiker.created_at %></td>
-        <td><%= hiker.adk_mountain_id %></td>
-        <td><%= hiker.id %></td>
-    </tr>
+    <% if hiker.on_mountain == true %>
+      <tr>
+          <td><%= link_to("Edit", "/hikers/#{hiker.id}/edit")%> </td>
+          <td><%= link_to('Delete', "/hikers/#{hiker.id}", method: :delete)%>
+          <td><%= hiker.name %></td>
+          <td><%= hiker.phone_num %></td>
+          <td><%= hiker.on_mountain %></td>
+          <td><%= hiker.updated_at %></td>
+          <td><%= hiker.created_at %></td>
+          <td><%= hiker.adk_mountain_id %></td>
+          <td><%= hiker.id %></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>

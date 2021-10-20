@@ -10,13 +10,15 @@ table, th, td {
 <h1>ADK Mountains</h1>
 <table>
   <tr>
+    <th> edit
     <th> delete
     <th> name
     <th> created_at
   </tr>
   <% @adk_mountains.each do |adk_mountain| %>
   <tr>
-    <th> <%= link_to('Delete', "/adk_mountains/#{adk_mountain.id}", method: :delete)%>
+    <th> <%= link_to("Edit", "/adk_mountains/#{adk_mountain.id}/edit")%> </th>
+    <th> <%= link_to('Delete', "/adk_mountains/#{adk_mountain.id}", method: :delete)%> </th>
     <th> <%= adk_mountain.name %> </th>
     <th> <%= adk_mountain.created_at %> </th>
   </tr>
