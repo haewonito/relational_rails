@@ -1,5 +1,4 @@
 require 'rails_helper'
-#wasn't passing. not sure why
 
 RSpec.describe 'the artists show page' do
 #US2
@@ -22,6 +21,19 @@ RSpec.describe 'the artists show page' do
 
     visit "/artists/#{artist1.id}"
     expect(page).to have_content("3 records in file")
+  end
+
+  it "user story 10: has a link to see the artist's records" do
+    artist1 = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: true)
+    record1 = Record.create!(title: "Bob Dylan", genre: 'Folk', used: false, year: 1962, artist_id: artist1.id)
+    record2 = Record.create!(title: "The Freewheelin'", genre: 'Folk', used: true, year: 1963, artist_id: artist1.id)
+    record3 = Record.create!(title: "Another Side Of", genre: 'Folk', used: false, year: 1964, artist_id: artist1.id)
+
+    visit "/artists/#{artist1.id}"
+    expect(page).to have_content("Records by the artist")
+    click_link ("Records by the artist")
+    expect(current_path).to eq("/artists/#{artist1.id}/records")
+    expect(page).to have_content("Another Side Of")
   end
 
   it 'user story 19: deletes artist shown along w/ all hikers associated linked to the mountain' do
