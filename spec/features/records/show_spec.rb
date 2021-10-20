@@ -17,8 +17,7 @@ RSpec.describe 'as a visitor' do
       expect(page).to have_content(@record1.used)
       expect(page).to have_content(@record1.year)
       expect(page).to have_content(@record1.artist_id)
-      # expect(page).to_not have_content(@record2.artist_id)
-      # expect(page).to_not have_content(@record2.title)
+      expect(page).to_not have_content(@record2.title)
 
     end
   end
