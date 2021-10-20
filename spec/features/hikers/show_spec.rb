@@ -23,7 +23,7 @@ RSpec.describe 'the hikers show page' do
       visit "/hikers/#{hiker.id}"
 
       click_link('Delete Hiker')
-
+#expect(current_path).to eq('/hiker')
       expect(page).to_not have_content(hiker.id)
       expect(page).to_not have_content(hiker.name)
       expect(page).to_not have_content(hiker.phone_num)

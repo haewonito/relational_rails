@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   patch '/records/:id', to: 'records#update'
 
   delete '/artists/:id', to: 'artists#destroy'
-  # delete '/records/:id', to: 'records#destroy'
+  delete '/records/:id', to: 'records#destroy'
 
 
 

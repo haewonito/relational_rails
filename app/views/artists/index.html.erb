@@ -15,6 +15,7 @@
   <p>
     <%= artist.first_name + " " + artist.name %>
     <%= link_to("Edit", "/artists/#{artist.id}/edit")%>
+    <%= link_to('Delete', "/artists/#{artist.id}", method: :delete)%>
     <br>
     <%= "Created At: " %>
     <%= artist.created_at %>
