@@ -318,40 +318,19 @@
           null
         ]
       },
-      "/Users/billyfrey/Turing/2module/relational_rails/app/controllers/adk_mountains_controller.rb": {
+      "/Users/billyfrey/Turing/2module/relational_rails/app/controllers/hikers_controller.rb": {
         "lines": [
           1,
+          1,
+          4,
+          null,
           null,
           1,
           0,
           null,
           null,
           1,
-          0,
-          0,
-          null,
-          null,
           1,
-          2,
-          2,
-          2,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
           null,
           1,
           0,
@@ -360,22 +339,9 @@
           null,
           null,
           1,
-          0,
-          null,
-          null,
           1,
-          0,
-          0,
-          0,
-          null,
-          null,
           1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
+          1,
           null,
           null
         ]
@@ -387,6 +353,6 @@
         ]
       }
     },
-    "timestamp": 1634767260
+    "timestamp": 1634768782
   }
 }

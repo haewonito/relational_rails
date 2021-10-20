@@ -15,6 +15,17 @@ RSpec.describe 'the hikers index page' do
     expect(page).to_not have_content(adk_mountain)
   end
 
+  it 'US:18 can click link and edit hiker for each hiker on table' do
+    adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
+    hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
+    hiker1 = adk_mountain.hikers.create(name: 'Shelby', phone_num: 585, on_mountain: true)
+    visit "/hikers"
+
+    first('section').click_link('Edit')
+
+    expect(current_path).to eq("/hikers/#{hiker.id}/edit")
+  end
+
   it 'US:23 can click link and delete any hiker' do
     adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
     hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)

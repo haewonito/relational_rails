@@ -20,6 +20,7 @@ table, th, td {
     <th> id
   </tr>
   <% @hikers.each do |hiker| %>
+  <section>
     <% if hiker.on_mountain == true %>
       <tr>
           <td><%= link_to("Edit", "/hikers/#{hiker.id}/edit")%> </td>
@@ -33,5 +34,6 @@ table, th, td {
           <td><%= hiker.id %></td>
       </tr>
     <% end %>
+  </section>
   <% end %>
 </table>

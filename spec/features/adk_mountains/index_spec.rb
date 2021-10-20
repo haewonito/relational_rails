@@ -21,6 +21,18 @@ RSpec.describe 'the adk_mountains index page' do
     end
   end
 
+  it 'US:17 can update adk_mountains by clicking link next to a mountain' do
+    adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
+    adk_mountain1 = AdkMountain.create(name: 'Dix', elevation: 5344, high_peak: true)
+
+    visit "/adk_mountains"
+
+    first('section').click_link('Edit')
+
+    expect(current_path).to eq("/adk_mountains/#{adk_mountain.id}/edit")
+
+  end
+
   it 'US:23 can click link and delete any adk_mountain' do
     adk_mountain = AdkMountain.create(name: 'Marcy', elevation: 5344, high_peak: true)
 
