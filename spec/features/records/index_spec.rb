@@ -11,7 +11,6 @@ RSpec.describe 'as a visitor' do
 
       visit "/records"
 
-
       expect(page).to have_content(record1.title)
       expect(page).to have_content(record1.genre)
       expect(page).to have_content(record2.used)
@@ -27,7 +26,6 @@ RSpec.describe 'as a visitor' do
 
       visit "/records"
 
-
       expect(page).to have_content(record1.title)
       expect(page).to have_content(record1.genre)
       expect(page).to have_content(record1.used)
@@ -37,6 +35,37 @@ RSpec.describe 'as a visitor' do
 
 
     end
+  end
+  describe 'when I visit any page on site' do
+    it 'user story 8: every page has a link that takes me back to "/records"' do
+      artist = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: false)
+      record1 = Record.create!(title: "My Aim Is True", genre: 'Rock', used: true, year: 1977, artist_id: artist.id)
+      record2 = Record.create!(title: "Bob Dylan", genre: 'Folk', used: false, year: 1962, artist_id: artist.id)
 
+      visit "/artists/#{artist.id}"
+      expect(page).to have_content("All Records")
+      click_link ('All Records')
+      expect(current_path).to eq("/records")
+
+      visit "/artists/#{artist.id}/records"
+      expect(page).to have_content("All Records")
+      click_link ('All Records')
+      expect(current_path).to eq("/records")
+
+      visit "/artists"
+      expect(page).to have_content("All Records")
+      click_link ('All Records')
+      expect(current_path).to eq("/records")
+
+      visit "/artists/new"
+      expect(page).to have_content("All Records")
+      click_link ('All Records')
+      expect(current_path).to eq("/records")
+
+      visit "/artists/#{artist.id}/edit"
+      expect(page).to have_content("All Records")
+      click_link ('All Records')
+      expect(current_path).to eq("/records")
+    end
   end
 end

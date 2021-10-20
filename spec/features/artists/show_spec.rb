@@ -14,6 +14,16 @@ RSpec.describe 'the artists show page' do
     expect(page).to have_content(artist.created_at)
   end
 
+  it 'user story 7: displays a number of children associated with the artist' do
+    artist1 = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: true)
+    record1 = Record.create!(title: "Bob Dylan", genre: 'Folk', used: false, year: 1962, artist_id: artist1.id)
+    record2 = Record.create!(title: "The Freewheelin'", genre: 'Folk', used: true, year: 1963, artist_id: artist1.id)
+    record3 = Record.create!(title: "Another Side Of", genre: 'Folk', used: false, year: 1964, artist_id: artist1.id)
+
+    visit "/artists/#{artist1.id}"
+    expect(page).to have_content("3 records in file")
+  end
+
   it 'user story 19: deletes artist shown along w/ all hikers associated linked to the mountain' do
     artist1 = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: true)
     artist2 = Artist.create!(name: 'Costello', first_name: 'Elvis', age: 76, alive: true)
@@ -32,7 +42,7 @@ RSpec.describe 'the artists show page' do
     expect(page).to_not have_content(artist1.first_name)
     expect(page).to_not have_content(artist1.name)
     expect(page).to_not have_content(artist1.age)
-  
+
 
     visit "/records"
 
