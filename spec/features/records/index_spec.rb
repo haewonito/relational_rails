@@ -8,7 +8,7 @@ RSpec.describe 'as a visitor' do
       @record1 = Record.create!(title: "My Aim Is True", genre: 'Rock', used: false, year: 1977, artist_id: @artist.id)
       @record2 = Record.create!(title: "Bob Dylan", genre: 'Folk', used: false, year: 1962, artist_id: @artist.id)
     end
-
+#child index US3
     it 'see all the records and their attributes' do
       visit "/records"
 

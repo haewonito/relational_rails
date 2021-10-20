@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+#US1
 RSpec.describe 'the artists show page' do
   it 'user story 1: displays the artist names' do
     artist = Artist.create(name: 'McDowell', first_name: 'Fred', age: 66, alive: false)

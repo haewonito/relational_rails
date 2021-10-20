@@ -11,7 +11,7 @@ RSpec.describe 'as a visitor' do
       @artist2 = Artist.create!(name: 'McDowell', first_name: 'Fred', age: 66, alive: false)
       @record3 = Record.create!(title: "Almost Blue", genre: 'Folk', used: true, year: 1981, artist_id: @artist2.id)
     end
-
+#US5
     it 'see all the attributes belonging to that record' do
       visit "/artists/#{@artist1.id}/records"
 
