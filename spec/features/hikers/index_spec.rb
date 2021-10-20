@@ -29,6 +29,7 @@ RSpec.describe 'the hikers index page' do
     hiker = adk_mountain.hikers.create(name: 'Billy', phone_num: 585, on_mountain: true)
 
     visit "/hikers"
+
     click_link('ADK Mountains')
     expect(current_path).to eq("/adk_mountains")
   end
